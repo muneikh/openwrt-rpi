@@ -4,21 +4,21 @@ name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-# on:
-#   push:
-#     branches: [ master ]
-#   pull_request:
-#     branches: [ master ]
-
 on:
-  repository_dispatch:
-  release:
-    types: published
   push:
-    branches:
-      - master
-    paths:
-      - '.config'
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# on:
+#   repository_dispatch:
+#   release:
+#     types: published
+#   push:
+#     branches:
+#       - master
+#     paths:
+#       - '.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
